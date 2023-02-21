@@ -1,11 +1,12 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:hal/src/ui/profile/profile_page.dart';
+
 import 'package:hal/src/ui/rent/rent_page.dart';
 
 import '../ui/auth/auth_page.dart';
 import '../ui/hire/hire_page.dart';
 import '../ui/home/home_page.dart';
 import '../ui/main/main.dart';
+import '../ui/profile_tab/account_tab.dart';
 import '../ui/splash/splash_page.dart';
 
 @MaterialAutoRouter(

@@ -18,7 +18,7 @@ import '../ui/auth/auth_page.dart' as _i2;
 import '../ui/hire/hire_page.dart' as _i5;
 import '../ui/home/home_page.dart' as _i4;
 import '../ui/main/main.dart' as _i3;
-import '../ui/profile/profile_page.dart' as _i7;
+import '../ui/profile_tab/account_tab.dart' as _i7;
 import '../ui/rent/rent_page.dart' as _i6;
 import '../ui/splash/splash_page.dart' as _i1;
 

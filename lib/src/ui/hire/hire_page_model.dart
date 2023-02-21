@@ -51,7 +51,6 @@ class HirePageModel extends StateNotifier<HirePageState> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     _subscription.cancel();
   }
