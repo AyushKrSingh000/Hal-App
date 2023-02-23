@@ -6,7 +6,7 @@ import '../ui/auth/auth_page.dart';
 import '../ui/hire/hire_page.dart';
 import '../ui/home/home_page.dart';
 import '../ui/main/main.dart';
-import '../ui/profile_tab/account_tab.dart';
+import '../ui/profile_tab/profile_tab.dart';
 import '../ui/splash/splash_page.dart';
 
 @MaterialAutoRouter(

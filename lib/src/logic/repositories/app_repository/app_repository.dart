@@ -68,6 +68,18 @@ class AppRepository extends StateNotifier<AppState> {
       }
     });
   }
+  setFavourites(String itemId) async {
+    final favourites = state.userData?.favourites ?? [];
+    if (state.userData?.favourites?.contains(itemId) == false) {
+      favourites.add(itemId);
+    } else {
+      favourites.remove(itemId);
+    }
+    await firebaseFirestore
+        .collection('users')
+        .doc(state.userData!.userId)
+        .update({'favourites': favourites});
+  }
 
   @override
   void dispose() {

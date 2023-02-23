@@ -48,6 +48,9 @@ class HirePageModel extends StateNotifier<HirePageState> {
           errorMessage: e.toString(), status: HirePageStatus.error);
     }
   }
+  setFilterType(FilterStatus status) {
+    state = state.copyWith(filter: status);
+  }
 
   @override
   void dispose() {
@@ -60,6 +63,7 @@ class HirePageModel extends StateNotifier<HirePageState> {
 class HirePageState with _$HirePageState {
   const factory HirePageState({
     @Default(HirePageStatus.initial) HirePageStatus status,
+    @Default(FilterStatus.all) FilterStatus filter,
     List<ItemData>? data,
     String? errorMessage,
   }) = _HirePageState;
@@ -70,4 +74,9 @@ enum HirePageStatus {
   dataLoaded,
   noData,
   error,
+}
+
+enum FilterStatus {
+  all,
+  favourites,
 }

@@ -8,13 +8,13 @@ class UserData {
   final String userName;
   final String email;
   final String profilePicUrl;
-
-  const UserData({
-    required this.userId,
-    required this.userName,
-    required this.email,
-    required this.profilePicUrl,
-  });
+  final List<String>? favourites;
+  const UserData(
+      {required this.userId,
+      required this.userName,
+      required this.email,
+      required this.profilePicUrl,
+      this.favourites});
 
   factory UserData.fromJson(Map<String, dynamic> json) =>
       _$UserDataFromJson(json);

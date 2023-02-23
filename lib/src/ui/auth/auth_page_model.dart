@@ -44,8 +44,6 @@ class AuthPageState with _$AuthPageState {
   const factory AuthPageState({
     @Default(AuthPageStatus.initial) AuthPageStatus status,
     @Default(false) bool isTncAccepted,
-    String? verificationId,
-    int? forceResendingToken,
     String? errorMessage,
   }) = _AuthPageState;
 }

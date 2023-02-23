@@ -18,8 +18,6 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$AuthPageState {
   AuthPageStatus get status => throw _privateConstructorUsedError;
   bool get isTncAccepted => throw _privateConstructorUsedError;
-  String? get verificationId => throw _privateConstructorUsedError;
-  int? get forceResendingToken => throw _privateConstructorUsedError;
   String? get errorMessage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -33,12 +31,7 @@ abstract class $AuthPageStateCopyWith<$Res> {
           AuthPageState value, $Res Function(AuthPageState) then) =
       _$AuthPageStateCopyWithImpl<$Res, AuthPageState>;
   @useResult
-  $Res call(
-      {AuthPageStatus status,
-      bool isTncAccepted,
-      String? verificationId,
-      int? forceResendingToken,
-      String? errorMessage});
+  $Res call({AuthPageStatus status, bool isTncAccepted, String? errorMessage});
 }
 
 /// @nodoc
@@ -56,8 +49,6 @@ class _$AuthPageStateCopyWithImpl<$Res, $Val extends AuthPageState>
   $Res call({
     Object? status = null,
     Object? isTncAccepted = null,
-    Object? verificationId = freezed,
-    Object? forceResendingToken = freezed,
     Object? errorMessage = freezed,
   }) {
     return _then(_value.copyWith(
@@ -69,14 +60,6 @@ class _$AuthPageStateCopyWithImpl<$Res, $Val extends AuthPageState>
           ? _value.isTncAccepted
           : isTncAccepted // ignore: cast_nullable_to_non_nullable
               as bool,
-      verificationId: freezed == verificationId
-          ? _value.verificationId
-          : verificationId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      forceResendingToken: freezed == forceResendingToken
-          ? _value.forceResendingToken
-          : forceResendingToken // ignore: cast_nullable_to_non_nullable
-              as int?,
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -93,12 +76,7 @@ abstract class _$$_AuthPageStateCopyWith<$Res>
       __$$_AuthPageStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {AuthPageStatus status,
-      bool isTncAccepted,
-      String? verificationId,
-      int? forceResendingToken,
-      String? errorMessage});
+  $Res call({AuthPageStatus status, bool isTncAccepted, String? errorMessage});
 }
 
 /// @nodoc
@@ -114,8 +92,6 @@ class __$$_AuthPageStateCopyWithImpl<$Res>
   $Res call({
     Object? status = null,
     Object? isTncAccepted = null,
-    Object? verificationId = freezed,
-    Object? forceResendingToken = freezed,
     Object? errorMessage = freezed,
   }) {
     return _then(_$_AuthPageState(
@@ -127,14 +103,6 @@ class __$$_AuthPageStateCopyWithImpl<$Res>
           ? _value.isTncAccepted
           : isTncAccepted // ignore: cast_nullable_to_non_nullable
               as bool,
-      verificationId: freezed == verificationId
-          ? _value.verificationId
-          : verificationId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      forceResendingToken: freezed == forceResendingToken
-          ? _value.forceResendingToken
-          : forceResendingToken // ignore: cast_nullable_to_non_nullable
-              as int?,
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -149,8 +117,6 @@ class _$_AuthPageState with DiagnosticableTreeMixin implements _AuthPageState {
   const _$_AuthPageState(
       {this.status = AuthPageStatus.initial,
       this.isTncAccepted = false,
-      this.verificationId,
-      this.forceResendingToken,
       this.errorMessage});
 
   @override
@@ -160,15 +126,11 @@ class _$_AuthPageState with DiagnosticableTreeMixin implements _AuthPageState {
   @JsonKey()
   final bool isTncAccepted;
   @override
-  final String? verificationId;
-  @override
-  final int? forceResendingToken;
-  @override
   final String? errorMessage;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AuthPageState(status: $status, isTncAccepted: $isTncAccepted, verificationId: $verificationId, forceResendingToken: $forceResendingToken, errorMessage: $errorMessage)';
+    return 'AuthPageState(status: $status, isTncAccepted: $isTncAccepted, errorMessage: $errorMessage)';
   }
 
   @override
@@ -178,8 +140,6 @@ class _$_AuthPageState with DiagnosticableTreeMixin implements _AuthPageState {
       ..add(DiagnosticsProperty('type', 'AuthPageState'))
       ..add(DiagnosticsProperty('status', status))
       ..add(DiagnosticsProperty('isTncAccepted', isTncAccepted))
-      ..add(DiagnosticsProperty('verificationId', verificationId))
-      ..add(DiagnosticsProperty('forceResendingToken', forceResendingToken))
       ..add(DiagnosticsProperty('errorMessage', errorMessage));
   }
 
@@ -191,17 +151,13 @@ class _$_AuthPageState with DiagnosticableTreeMixin implements _AuthPageState {
             (identical(other.status, status) || other.status == status) &&
             (identical(other.isTncAccepted, isTncAccepted) ||
                 other.isTncAccepted == isTncAccepted) &&
-            (identical(other.verificationId, verificationId) ||
-                other.verificationId == verificationId) &&
-            (identical(other.forceResendingToken, forceResendingToken) ||
-                other.forceResendingToken == forceResendingToken) &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, status, isTncAccepted,
-      verificationId, forceResendingToken, errorMessage);
+  int get hashCode =>
+      Object.hash(runtimeType, status, isTncAccepted, errorMessage);
 
   @JsonKey(ignore: true)
   @override
@@ -214,18 +170,12 @@ abstract class _AuthPageState implements AuthPageState {
   const factory _AuthPageState(
       {final AuthPageStatus status,
       final bool isTncAccepted,
-      final String? verificationId,
-      final int? forceResendingToken,
       final String? errorMessage}) = _$_AuthPageState;
 
   @override
   AuthPageStatus get status;
   @override
   bool get isTncAccepted;
-  @override
-  String? get verificationId;
-  @override
-  int? get forceResendingToken;
   @override
   String? get errorMessage;
   @override

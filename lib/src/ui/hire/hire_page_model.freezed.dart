@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$HirePageState {
   HirePageStatus get status => throw _privateConstructorUsedError;
+  FilterStatus get filter => throw _privateConstructorUsedError;
   List<ItemData>? get data => throw _privateConstructorUsedError;
   String? get errorMessage => throw _privateConstructorUsedError;
 
@@ -32,7 +33,10 @@ abstract class $HirePageStateCopyWith<$Res> {
       _$HirePageStateCopyWithImpl<$Res, HirePageState>;
   @useResult
   $Res call(
-      {HirePageStatus status, List<ItemData>? data, String? errorMessage});
+      {HirePageStatus status,
+      FilterStatus filter,
+      List<ItemData>? data,
+      String? errorMessage});
 }
 
 /// @nodoc
@@ -49,6 +53,7 @@ class _$HirePageStateCopyWithImpl<$Res, $Val extends HirePageState>
   @override
   $Res call({
     Object? status = null,
+    Object? filter = null,
     Object? data = freezed,
     Object? errorMessage = freezed,
   }) {
@@ -57,6 +62,10 @@ class _$HirePageStateCopyWithImpl<$Res, $Val extends HirePageState>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as HirePageStatus,
+      filter: null == filter
+          ? _value.filter
+          : filter // ignore: cast_nullable_to_non_nullable
+              as FilterStatus,
       data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -78,7 +87,10 @@ abstract class _$$_HirePageStateCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {HirePageStatus status, List<ItemData>? data, String? errorMessage});
+      {HirePageStatus status,
+      FilterStatus filter,
+      List<ItemData>? data,
+      String? errorMessage});
 }
 
 /// @nodoc
@@ -93,6 +105,7 @@ class __$$_HirePageStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? status = null,
+    Object? filter = null,
     Object? data = freezed,
     Object? errorMessage = freezed,
   }) {
@@ -101,6 +114,10 @@ class __$$_HirePageStateCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as HirePageStatus,
+      filter: null == filter
+          ? _value.filter
+          : filter // ignore: cast_nullable_to_non_nullable
+              as FilterStatus,
       data: freezed == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
@@ -118,6 +135,7 @@ class __$$_HirePageStateCopyWithImpl<$Res>
 class _$_HirePageState implements _HirePageState {
   const _$_HirePageState(
       {this.status = HirePageStatus.initial,
+      this.filter = FilterStatus.all,
       final List<ItemData>? data,
       this.errorMessage})
       : _data = data;
@@ -125,6 +143,9 @@ class _$_HirePageState implements _HirePageState {
   @override
   @JsonKey()
   final HirePageStatus status;
+  @override
+  @JsonKey()
+  final FilterStatus filter;
   final List<ItemData>? _data;
   @override
   List<ItemData>? get data {
@@ -140,7 +161,7 @@ class _$_HirePageState implements _HirePageState {
 
   @override
   String toString() {
-    return 'HirePageState(status: $status, data: $data, errorMessage: $errorMessage)';
+    return 'HirePageState(status: $status, filter: $filter, data: $data, errorMessage: $errorMessage)';
   }
 
   @override
@@ -149,13 +170,14 @@ class _$_HirePageState implements _HirePageState {
         (other.runtimeType == runtimeType &&
             other is _$_HirePageState &&
             (identical(other.status, status) || other.status == status) &&
+            (identical(other.filter, filter) || other.filter == filter) &&
             const DeepCollectionEquality().equals(other._data, _data) &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, status,
+  int get hashCode => Object.hash(runtimeType, status, filter,
       const DeepCollectionEquality().hash(_data), errorMessage);
 
   @JsonKey(ignore: true)
@@ -168,11 +190,14 @@ class _$_HirePageState implements _HirePageState {
 abstract class _HirePageState implements HirePageState {
   const factory _HirePageState(
       {final HirePageStatus status,
+      final FilterStatus filter,
       final List<ItemData>? data,
       final String? errorMessage}) = _$_HirePageState;
 
   @override
   HirePageStatus get status;
+  @override
+  FilterStatus get filter;
   @override
   List<ItemData>? get data;
   @override
