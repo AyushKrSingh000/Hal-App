@@ -4,8 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hal/src/constants/constants.dart';
 import 'package:hal/src/logic/repositories/app_repository/app_repository.dart';
 
-class AccountUserDetails extends ConsumerWidget {
-  const AccountUserDetails({super.key});
+class ProfileUserDetails extends ConsumerWidget {
+  const ProfileUserDetails({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

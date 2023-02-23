@@ -35,7 +35,7 @@ class _AppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'BuildChat',
       theme: ThemeData(
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.white,
         textTheme: GoogleFonts.poppinsTextTheme(

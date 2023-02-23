@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:hal/src/ui/hire/item_details/item_details_page.dart';
 
 import 'package:hal/src/ui/rent/rent_page.dart';
 
@@ -38,6 +39,10 @@ import '../ui/splash/splash_page.dart';
         page: ProfileTab,
       ),
     ]),
+    AutoRoute(
+      path: '/hire-details',
+      page: ItemDetailPage,
+    )
   ],
 )
 class $AppRouter {}

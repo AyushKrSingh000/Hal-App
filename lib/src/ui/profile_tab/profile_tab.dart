@@ -16,9 +16,9 @@ class ProfileTab extends ConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: const [
-          AccountUserDetails(),
+          ProfileUserDetails(),
           SizedBox(height: 25),
-          AccountTabItems(),
+          ProfileTabItems(),
           SizedBox(height: 20),
         ],
       ),

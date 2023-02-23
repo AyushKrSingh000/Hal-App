@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AccountTabItems extends ConsumerWidget {
-  const AccountTabItems({super.key});
+class ProfileTabItems extends ConsumerWidget {
+  const ProfileTabItems({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
