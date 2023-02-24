@@ -4,43 +4,25 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../constants/constants.dart';
 
-class BottomBar extends ConsumerWidget {
-  const BottomBar({super.key});
+class DiscriptionBox extends ConsumerWidget {
+  final String descritption;
+  const DiscriptionBox({super.key, required this.descritption});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Container(
-      color: primaryColor,
-      height: 72,
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: Center(
-        child: Container(
-          height: 50,
-          width: 200,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(
-              width: 2,
-              color: primaryColor,
-            ),
-            boxShadow: [
-              BoxShadow(
-                offset: const Offset(4, 4),
-                color: secondaryColor,
-              ),
-            ],
+        child: Center(
+            child: Text(
+          descritption,
+          style: GoogleFonts.poppins(
+            fontSize: 18,
+            fontWeight: FontWeight.w400,
+            letterSpacing: 1,
+            color: primaryColor,
           ),
-          child: Center(
-              child: Text(
-            'Hire Now',
-            style: GoogleFonts.roboto(
-              fontSize: 25,
-              fontWeight: FontWeight.w700,
-              color: primaryColor,
-            ),
-          )),
-        ),
+        )),
       ),
     );
   }

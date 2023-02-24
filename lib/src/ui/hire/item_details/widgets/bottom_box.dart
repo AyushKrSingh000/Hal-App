@@ -5,42 +5,51 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../../constants/constants.dart';
 
 class BottomBox extends ConsumerWidget {
-  const BottomBox({super.key});
+  final String cost;
+  final String duration;
+
+  const BottomBox({super.key, required this.cost, required this.duration});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Container(
-      color: primaryColor,
+      color: Colors.grey.shade100,
       height: 72,
       width: MediaQuery.of(context).size.width,
-      child: Center(
-        child: Container(
-          height: 50,
-          width: 200,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(
-              width: 2,
-              color: primaryColor,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Cost : $cost\nFor $duration',
+              style: GoogleFonts.poppins(
+                  fontSize: 17, fontWeight: FontWeight.w500),
             ),
-            boxShadow: [
-              BoxShadow(
-                offset: const Offset(4, 4),
-                color: secondaryColor,
-                blurRadius: 2,
+            Container(
+              height: 50,
+              decoration: BoxDecoration(
+                color: primaryColor,
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(
+                  width: 2,
+                  color: Colors.grey.shade100,
+                ),
               ),
-            ],
-          ),
-          child: Center(
-              child: Text(
-            'Hire Now',
-            style: GoogleFonts.roboto(
-              fontSize: 25,
-              fontWeight: FontWeight.w700,
-              color: primaryColor,
+              child: Center(
+                  child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Text(
+                  'Hire Now',
+                  style: GoogleFonts.roboto(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
+                  ),
+                ),
+              )),
             ),
-          )),
+          ],
         ),
       ),
     );
